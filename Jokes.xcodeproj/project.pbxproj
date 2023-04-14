@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		272EBF5229E9D8A6006107FA /* JokeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272EBF5129E9D8A6006107FA /* JokeView.swift */; };
+		272EBF5529E9DBD4006107FA /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272EBF5429E9DBD4006107FA /* Joke.swift */; };
 		277A664029E9D64C00DFE803 /* JokesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A663F29E9D64C00DFE803 /* JokesApp.swift */; };
 		277A664429E9D65100DFE803 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277A664329E9D65100DFE803 /* Assets.xcassets */; };
 		277A664729E9D65100DFE803 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277A664629E9D65100DFE803 /* Preview Assets.xcassets */; };
@@ -15,6 +16,7 @@
 
 /* Begin PBXFileReference section */
 		272EBF5129E9D8A6006107FA /* JokeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeView.swift; sourceTree = "<group>"; };
+		272EBF5429E9DBD4006107FA /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		277A663C29E9D64C00DFE803 /* Jokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jokes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		277A663F29E9D64C00DFE803 /* JokesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesApp.swift; sourceTree = "<group>"; };
 		277A664329E9D65100DFE803 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,9 +42,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		272EBF5629E9DBD9006107FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				272EBF5429E9DBD4006107FA /* Joke.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		277A663329E9D64C00DFE803 = {
 			isa = PBXGroup;
 			children = (
+				272EBF5629E9DBD9006107FA /* Model */,
 				277A663E29E9D64C00DFE803 /* Jokes */,
 				277A663D29E9D64C00DFE803 /* Products */,
 			);
@@ -147,6 +158,7 @@
 			files = (
 				277A664029E9D64C00DFE803 /* JokesApp.swift in Sources */,
 				272EBF5229E9D8A6006107FA /* JokeView.swift in Sources */,
+				272EBF5529E9DBD4006107FA /* Joke.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
