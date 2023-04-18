@@ -4,10 +4,10 @@
 //
 //  Created by Lucas García on 14/4/23.
 //
-
+import Blackbird
 import Foundation
 
-struct Joke: Identifiable, Codable{
+struct Joke: Identifiable, Codable, BlackbirdModel{
     let type: String
     let setup: String
     let punchline: String
