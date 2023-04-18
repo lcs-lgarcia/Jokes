@@ -81,7 +81,7 @@ struct JokeView: View {
             
         }
         .padding()
-        .navigationTitle("RandomJokes")
+        .navigationTitle("Fresh Jokes")
         .task{
             currentJoke = await NetworkService.fetch()
             if currentJoke == nil {
