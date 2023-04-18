@@ -9,9 +9,10 @@ import SwiftUI
 
 struct JokeView: View {
     
-    @Enviroment(\.blackbirdDatabase) var db: Blackbird.Database?
+    @Environment(\.blackbirdDatabase) var db: Blackbird.Database?
     @State var punchlineOpacity = 0.0
     @State var currentJoke: Joke?
+    @State var savedToDataBase = false
     
     var body: some View {
         
@@ -67,6 +68,8 @@ struct JokeView: View {
                     if let currentJoke = currentJoke {
                         try await db!.transaction { core in
                             try core.query("INSERT INTO Joke(id, type, setup, punchline) VALUES (?, ?, ?, ?)", currentJoke.id, currentJoke.type, currentJoke.punchline, currentJoke.setup )
+                            
+                            savedToDataBase = true
                         }
                     }
                 }
@@ -81,10 +84,14 @@ struct JokeView: View {
         .navigationTitle("RandomJokes")
         .task{
             currentJoke = await NetworkService.fetch()
+            if currentJoke == nil {
+                currentJoke = await NetworkService.fetch()
+            }
+            }
         }
         
 }
-}
+
 
 struct JokeView_Previews: PreviewProvider {
     static var previews: some View {
